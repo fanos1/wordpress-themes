@@ -2,4 +2,5 @@
 
 ### *[amriss theme](https://www.amrisseedsoil.co.uk)
 ### *[bigboy theme](https://www.bigboybrandzzonline.com)
-### *[xanthi theme](https://www.alphina.co.uk)
+### *[alphina theme](https://www.alphina.co.uk)
+### *[xanthi theme](https://www.declondon.com)
