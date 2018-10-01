@@ -1,0 +1,153 @@
+/*
+Theme Name: Xanthi
+Author: irfan kissa
+*/
+
+/* override Bootstrap's default width of 1170px when the viewport is 1200px or bigger. Make it 970 instead 
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+*/
+
+
+a, p, div {text-decoration: none !important;}
+ul { padding: 0;}
+li {list-style: none;}
+
+div#wrapper {
+    box-shadow: 1px 1px 10px 1px #888888;
+    background-color:rgba(255, 255, 255, 0.9);
+}
+
+/* override boootstrap defaults with following custom */ 
+a.thumbnail {
+	padding: 0;
+	height: 220px;
+}
+
+
+
+/***************** start 3box images ******************/
+a.parent {
+    position: relative;/* Make relative so that we can use absolute for div.hidden_child <div> BOX */
+}   
+div.hidden_child {
+    width: 100%;                            
+    position: absolute;
+    color: #fff;    
+    top: 0;
+    left: 0;   
+    visibility:  hidden;    
+}    
+/* a.box:hover div.child {  Select div.hidden_child, which has parent <a.parent> */
+a.parent:hover div.hidden_child {  
+    visibility: visible;       
+    background-color: rgba(250, 41, 4, 0.4);    
+    padding: 0.5em;
+    
+     -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;   
+}
+p.box_title {    
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    text-align: center;
+    color:#fff;    
+    background-color:  #fa294c;    
+    
+}
+/****************** End 3box images ****************** */
+
+
+/* SkipLinkg */
+ a.skiplink {
+    margin-left: -9999px;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700,400);
+
+/****************** Bootstrap navbar overwrite RED COLOR ************** */
+
+.navbar {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.navbar ul.nav li a {
+    text-transform: uppercase; /* meke links uppsercase */
+}
+
+
+.navbar-default {
+    background-color: #fff;
+    border:none;
+    /* Set custom border, Only top and bottom */			
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;	
+
+}
+/* set custom thick red border on hover */
+nav a:hover, 
+nav a:active {
+    border-top: 2px solid #F00;
+    text-decoration: none;
+}
+/* fix the Flick effect when hover. the thick border we apply on hover pushes the <a> down. */
+nav a {
+    border-top: 2px solid transparent;	
+}
+/* change the color of links to Black */		
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+}
+.navbar-default .navbar-nav li  a:hover {
+    color:#F00;
+}
+/****************** END Bootstrap navbar overwrite RED COLOR ************** */
+
+
+.skrito {  
+    display: none;
+} 
+.skrito2 {
+    position: absolute;
+    left: -999em;
+}
+
+
+/* ======== FOOTER NAVIGATION=========== */
+footer nav  {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+footer nav ul {
+    text-align: center;
+}
+footer nav li a {
+	text-transform: uppercase;
+        color: #000;
+}
+footer nav ul li  {
+    display: inline-block;        
+    padding-left: 10px;
+}
+
+
+/*  if browser smaller than 768, apply following styles */
+@media only screen and (max-width: 768px) {
+    form.navbar-form { 
+        display:none;/* Hide search form */
+    }
+    
+    nav a:hover, 
+    nav a:active {
+        border:none; /* Dont display red TOP border on hover on small screen */
+    }
+}		
+ 
+

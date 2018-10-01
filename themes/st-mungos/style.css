@@ -1,0 +1,408 @@
+/*  
+Theme Name: Simple Static
+Author: Irfan Kissa
+*/
+
+iframe {margin-top:1em;	}
+li.page-item {
+	color:#666;
+	background-color:#09F;
+}
+h3, h4, h5, h6, ul, ol, dl, p { margin:0; padding:0; }
+h3 {padding-top:0.25em;padding-bottom:0.25em;}
+h1, h2, h3, h4 {color: #F33;}
+a {text-decoration: none;padding:0;color: #FFF;}
+a img {border: none;}
+span {display:inline-block;margin-bottom:0.5em;}
+#respond {margin-top: 2em;}
+.textwidget a {padding:0; margin-bottom:0.25em;}
+a.skiplink {float:right;}
+
+/*Better to start the base as em, and use % for the rest. px fonts not resized in ie */
+h1	{font-size: 1.7em;} 
+h2	{font-size: 1.5em;}
+h3	{font-size: 1.4em;}
+h4	{font-size: 1.2em;}
+h5	{font-size: 1.1em;}
+
+body {
+	font-size: 82.5%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;  
+	text-align: center;/*this centers the wholepage in IE 5*. Undo this align in the #wrap div below */
+	margin: 0;
+	padding: 0;	
+}
+
+
+
+
+/****** FIX EXTRA WHITESPACE BUG in IE 6.0? ************
+* If a link with [display:block] and no explicit dimensions is inside a list item, any spaces or linebreaks
+* that follow the list item in the code will cause extra whitespace to appear in the browser. You can get rid
+* of this problem by writing the <li> items on the same row, but the code readability will be bad. 
+* If you don’t want to compromise the code readability, you need the following to fix it, it gives layour:
+*/
+li {height:1em;	list-style-type:none;}
+body li	{height:auto;} 
+
+#wrap {
+	width: 960px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	text-align: left; /*this puts text back to default. We had aligned text to center in body{} */
+	height: auto; /* AUTO height is not necessary for centering, but it's used with RELATIVE div boxes */
+	background-image: url(img/decoration_line.gif);
+	background-repeat: no-repeat;
+	padding-top: 1em;
+}
+ 
+#header {
+	width: 100%;
+	min-height:100px;	
+	padding-bottom:0.25em;
+/*	border:#000 solid 1px; */
+}  
+.logo {
+	width:232px;
+	height:92px;
+	float:left;
+	margin-right:0.5em;
+/*	border:#03F solid 2px;	 */
+}
+#searchform {
+	float:left;
+	margin-top:0.5em;
+/*	border:#C33 solid 2px;	  */
+}  
+  
+/*------------------------
+ COMMONLINKS BAR TOP
+-------------------------*/
+.topcommonlinks-menu {
+	width:390px;
+	float:left;
+	padding:0.5em;
+/*	border:#000 solid 2px;	*/		
+}
+
+
+.topcommonlinks-menu ul#menu-common-links-top li {
+	background-color:transparent;   /*overwrite inherited*/
+	border-radius:0px;
+	width:100px;	
+	display:inline;	
+	text-align:left;
+}
+.topcommonlinks-menu ul#menu-common-links-top li a {
+	font-family: "MS Serif", "New York", serif;
+	font-size: 1.1em;
+	color: #92278F;
+}
+
+
+/*-------------------
+	TOP  MENU BAR
+-------------------*/
+div.top-menu {
+	width:940px; 
+	float:left;
+	margin-top: 0.25em;
+	padding-bottom: 1em;	
+/*	border:#000 solid 2px; */
+}
+
+/**************************
+ TOP LEVEL LINKS <LI> 
+**************************/
+ul#menu-global {
+	position: relative;
+	z-index: 100;/*When position is used together with z-index, and if the z-index has value set other
+	than 0, new new stacking order is starts. We are starting new stacking order with 100 here */
+	padding-bottom: 2em;
+}
+
+ul#menu-global li { /*top-level <li>*/	
+	position: relative;
+	float: left;	
+	width:154px; /*fixed with of 150px gives problems when resizing screen*/
+	margin-right:1em;
+	padding:0.5em;
+	background-color: #36598C; /*dark blue*/
+	text-align:center;	
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px 10px 0 0; /*apply only to top-right corner of 10px */	
+}
+
+
+.top-menu ul#menu-global li:nth-child(1) a {  
+	padding-right:4em;
+	padding-left:4em;	
+}
+
+.top-menu ul#menu-global li:nth-child(2) a {  
+	padding-right:3em;
+	padding-left:3em;
+}
+
+
+.top-menu ul#menu-global li:nth-child(3) a {  
+	padding-right:3em;
+	padding-left:3em;
+}
+ul#menu-global li a:hover {
+	color: #FF9900;
+}
+ 
+/*********************************
+   SUB-LINKS OF TOP MENU
+**********************************/
+.top-menu ul#menu-global ul.sub-menu {
+	margin-left:-9999px;
+	position:absolute; /*absolute will position itself against the relative parent */
+/*	width:200px;  */
+	top:25px;
+	left:0px;
+	z-index:1000;	
+}
+.top-menu ul#menu-global ul.sub-menu li { 			 
+	border-radius:0; /*overwrite inherited*/
+	text-align:left; /*overwrite inherited*/
+}
+ 
+
+.top-menu ul#menu-global ul.sub-menu li a { 
+	padding:0; /*over-write parent*/
+	text-align:left;
+	display:block; 	
+}	
+
+ul#menu-global li:hover ul.sub-menu {	/*when user hovers on top level <li> redisplay subUL*/
+	margin-left:0px; /*margin-left was -9999, bring it back to the page stage */	
+}
+
+/*-----------------------------
+	SLIDER
+----------------------------*/
+#slide-container { 
+	margin-bottom:1em;
+	margin-top:0.5em;
+	width:950px;
+	height:300px; 
+	border: 5px solid #84BA27;
+	border-radius: 5px;
+}
+
+
+/*-------------- 
+ LEFT SIDEBAR 
+----------------*/
+#sidebar-left-forfrontpage {
+	width:200px;
+	float:left;
+}
+#sidebar-left-forfrontpage a {
+	display: block; 
+	color: #333; 
+}
+#frontpage-left-widget {
+	margin-top:1em;	
+	margin-bottom: 1em;
+	padding-right:2.5em;		
+}
+#sidebar-left {
+	width:160px;
+	float:left;
+	min-height:130px;
+	background-color:#F60; 	 
+	padding:1em;	
+	margin-top:1em;
+	margin-right:0.5em;
+	border-radius: 10px;
+}
+#sidebar-left li {
+	padding-bottom: 0.5em;
+	padding-left:0.5em;
+	border-bottom:#FFF dashed 1px;
+}
+
+#sidebar-left a {
+	color: #FFF; 
+}
+
+
+/*-------------- 
+ RIGHT SIDE BAR 
+---------------*/
+#right-sidebar-container {
+	width: 200px; /* Active sidebar width is 300 px due to right margin */	
+	float: right;
+	border:#F60 solid 5px;
+	border-radius: 10px;
+}
+#right-sidebar-container p a img {
+	margin-left: 1.50em; 
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+div#frontpage-right-column {
+	padding: 0.5em;
+	margin-top:1em;
+	margin-bottom: 1em;
+/*	border:#F60 solid 5px;
+	border-radius: 10px;
+*/
+}
+
+div#otherpage-right-column {
+	padding:0.5em;
+	margin-top:1em;
+/*	border:#F60 solid 5px;
+	border-radius: 10px;
+*/
+}
+
+
+.irfan-box {	
+	padding:0.5em;
+	margin-bottom:1em;
+	border:#F60 solid 5px; 
+	border-radius: 10px;
+}
+.irfan-box a {
+	color: #F93;
+}
+
+/*-----------------------
+ #content for other pages
+-----------------------*/
+#content {
+	width: 530px; 
+	float: left;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	padding-bottom:0.5em;
+}
+#content ul {
+	padding-left:1.5em;
+}
+#content li {
+	list-style-type:disc;
+}
+
+#content a {
+	color:#F60; 
+}
+
+
+/*----------------------
+ #content for front page
+-----------------------*/
+div#content-frontpage {
+	width: 530px; 
+	float: left;
+	padding-left:0.5em;
+	padding-right:0.5em;
+	padding-bottom:0.5em;
+}
+
+
+/* ----------------
+	FOOTER 
+-----------------*/					
+div#footer {
+	width: 100%;
+	float: left;
+	min-height: 100px;
+	padding: 20px 0;
+	margin-top:2em;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	background-image: url("img/decoration_line.gif");
+    background-repeat: no-repeat;
+}
+div#footer a { /*ALL <a> INSIDE FOOTER WILL HAVE GREY TEXT COLOR */
+	color: #666;
+}
+	
+div.footer-left {
+	width: 700px; 
+	float: left;
+	font-size: 1em;
+	color: #666;
+}	
+	
+div.footer-right {
+	width: 180px; 
+	float: right;
+	padding-left:1em;
+}
+
+/***************** 
+ SOCIAL MEDIA 
+ *****************/
+ul#socialmedia {
+	margin-top:1em;	
+}
+
+ul#socialmedia li { 
+	display:inline-block; 
+	width:80px;
+}
+
+ul#socialmedia li a {
+	display:block;
+	height:40px;
+	text-indent:-9999px; /*hide the text, text is there for screen readers to hear*/
+}
+
+ul#socialmedia li a#facebook { 
+	background-image: url(img/facebook.jpg);
+	background-repeat: no-repeat;
+}
+ul#socialmedia li a#twitter { 
+	background-image: url(img/twitter.jpg);
+	background-repeat: no-repeat;	
+}
+
+ul#socialmedia li a#youtube { 
+	background-image: url(img/youtube.jpg);
+	background-repeat: no-repeat;	
+}
+
+#sitempap-container {
+	float:left;
+	width:400px;	
+}
+div#sitempap-container p a {	
+	color:#033;
+}
+
+/*-------------------- 
+ HOME BUTTON HIGHLIGHT 
+----------------------*/
+body.page-id-40 div.top-menu ul#menu-global li#menu-item-43>a, /*TENANTS*/
+body.parent-pageid-40 div.top-menu ul#menu-global li#menu-item-43>a,  /* when child page of parent TENANT is viewed */
+body.page-id-27 div.top-menu ul#menu-global li#menu-item-32>a, /*HOME*/
+body.parent-pageid-27 div.top-menu ul#menu-global li#menu-item-32>a
+{
+	color: #FFCC00;
+	font-weight: bold;
+}
+
+body.page-id-51 div.top-menu ul#menu-global li#menu-item-53>a {/*LANDLORDS button*/
+	color: #FFCC00;	font-weight: bold;
+}
+
+body.page-id-98 div.top-menu ul#menu-global li#menu-item-100>a {/*LOCALAUTHORITY button*/
+	color: #FFCC00;	font-weight: bold;
+}
+
+
+
+.clearFloat {
+	clear:both;	
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+	

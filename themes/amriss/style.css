@@ -1,0 +1,612 @@
+/*
+Theme Name: Amriss
+Author: irfan kissa
+version: 1.0
+*/
+
+/* =============================
+ STYLES FROM BOOTSTRAP 
+ ======================== */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.lead {
+
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.4;	
+
+}
+.breadcrumb {
+    padding: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+    background-color: #eceeef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+.table-bordered > tbody > tr > td, 
+.table-bordered > thead > tr > th {
+    border: 1px solid #ddd;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+th {
+    text-align: left;
+}
+
+
+button, 
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+	background-color: #056839;
+}
+.btn {
+	text-decoration: none;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #acc837;
+    border-color: #acc837;
+}
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+.alert {
+    padding: 1em 1.25em;
+    margin-bottom: 1em;
+    border: 1px solid transparent;
+    border-radius: .25em;
+}
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+}
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+}
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bcdff1;
+    color: #31708f;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.caption {
+    padding: 9px;
+    color: #333;
+}
+/* 
+===================== 
+END BOOTSTRAP STYLES 
+=======================
+*/
+
+
+
+* {
+    box-sizing: border-box;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/* float all columns */
+[class*="col-"] {
+    float: left;     
+    padding: 5px;
+}
+
+.img-responsive {
+   /* width: 100%;  If you want the image to scale both up and down on responsiveness, set the CSS width property to 100% and height to auto:*/  
+  max-width: 100% ; /* image to scale down if it has to, but never scale up to be larger than its original size,         */
+  height: auto;  
+  border:none;
+}
+.center-txt {
+	text-align: center;
+}
+
+.container {  
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; 
+  padding: 10px;  
+}
+
+/* Apply clearfix to all .containers */
+.container::after { 
+    content: "";
+    clear: both;
+    display: table;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.centreit {
+    text-align: center;
+}
+.pull-right {
+    text-align: right;
+}
+:root {
+    --main-txt-color: #04726b;
+}
+
+body {
+    /* 
+    font-family: 'Montserrat', sans-serif; 
+    */
+
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+	
+	/*
+    font-family: "Poppins", Helvetica, Arial, sans-serif;    
+    -moz-font-feature-settings: "liga", "kern";
+    text-rendering: optimizelegibility;
+	*/
+	
+}
+
+.show-on-mb {
+    display: none; /* By default hidden. Media query used to show on mobiles */
+}
+.hide-on-mb {
+    /* By default displayed, hide this on mobiles with MEDIA */
+}
+
+/* Paypal */
+#woo_pp_ec_button_product {
+	max-width: 280px;
+}
+
+/* ===============
+ NAVIGATION 
+=============== 
+*/
+.dropbtn {
+	border: 2px solid transparent;
+	cursor: pointer;				
+	color: #000;
+	text-decoration: none;		
+}
+ul#myTopnav {
+	padding-left: 0px;
+}
+ul#myTopnav > li.dropdown {
+	position: relative;
+	display: inline-block;
+	margin-right: 2em;
+	
+}
+.dropdown {
+	border-bottom: 2px transparent solid; 
+}
+.dropdown a {
+	color: #49504c;
+	text-decoration: none;
+	font-weight: bold;
+}
+/* 
+.dropdown:hover .child-ul {
+	display: block; 
+}	 
+*/	
+.dropdown:hover {
+	border-bottom: 2px #056839 solid; 
+}
+.child-ul a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.child-ul a:hover {
+	background-color: #f1f1f1     
+}
+
+.child-ul {	
+	/* From BOOTSTRAP */
+	margin-top: 0;
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 1000;	
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 2px 0 0;
+		margin-top: 2px;
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+
+#navigation input[type=text] {
+	padding: 6px;            
+	border: 1px solid #ebebeb;            
+	font-size: 17px;
+}
+#caret {
+	-webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+	
+	vertical-align: top;
+}
+
+
+
+		
+/* 
+============================= 
+ ICONS :: https://icomoon.io/app 
+================================ 
+*/
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}		
+.icon-cart { /* Single-colored icons can be modified like so: .icon-name */
+  font-size: 18px;
+  color: #056839;
+}
+
+/*========== 
+SHOPPPING CART 
+=========== */
+.shopping-cart {
+	text-decoration: none;
+	color: #49504c;
+	padding-top: 5px;
+}
+
+/* ========== 
+ WOOCOMMERCE OVERRIDE 
+ ============*/
+.woocommerce  .woocommerce-breadcrumb {
+	padding-top: 10px;
+}
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button {
+	background-color: #acc837;
+	color: #fff;
+}
+.woocommerce-loop-product__title {
+	color: #494f4c;
+}
+.woocommerce ul.products li.product .price {
+	color: #77a464;
+	font-weight: 700;
+	/* font-size: .857em; */
+	font-size: 1em;
+}
+#orderby {
+  text-align: right;
+}
+.woocommerce-products-header__title.page-title {
+    margin-top: 0px;
+    color: #a5a3a3;
+}
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+	
+    background-color: #056839;    
+}
+
+div.quantity input.input-text {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+/* woocommerce comment - review */
+div.woocommerce-tabs {
+  padding: 18px;
+}
+#container {
+    padding: 18px;
+}
+div#container #conetent .col-4 figure.woocommerce-product-gallery__wrapper {
+  margin-left: 5px;
+}
+ul.products li::first-child {
+  padding-left: 20px;
+}
+.related.products {
+    padding: 20px;
+}
+form#commentform {
+  max-width: 400px;
+}
+form#commentform textarea#comment {
+  width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+form#commentform input[type=text], 
+form#commentform input[type=email], 
+form#commentform  select {
+    width: 100%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+/* ======= =======
+MEDIA QUERIES :: Non Mobile-First Method used here 
+====================================== */
+
+/* everything less than or equal to 1200px ::  Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+	#xcomponent-paypal-button-a4e5224686 {
+		font-size: 0;
+		width: 100%;
+		max-width: 299px;
+	}
+	
+	
+
+}
+
+/* everything less than or equal to 992px */
+@media only screen and (max-width : 992px) {
+	select#orderby {
+		text-align: center!important;
+	}
+
+    .col-1, 
+    .col-2, 
+    .col-3, 
+    .col-4, 
+    .col-5, 
+    .col-6, 
+    .col-7, 
+    .col-8, 
+    .col-9, 
+    .col-11, .col-12 {
+        width: 100% !important;
+        /* max-width: 100% !important; */
+        display: block!important;
+    }	
+	#home-shop-cart .col-2 {
+		max-width: 20%!important;
+	}
+	#home-shop-cart .col-8 {
+		max-width: 60%!important;		
+	}
+    
+    .show-on-mb {
+        display: block;
+    }    
+    .hide-on-mb {
+        display: none!important;
+    }
+    .show-on-mb div.col-6 {
+        width: 50%!important;
+        float: left;
+        box-sizing: border-box;
+    }    
+    .show-on-mb div:last-child { 
+        text-align: right;
+    } 	
+	
+	
+	
+	/* Woocommerce Overrrdies :: display <li> items full widht block on mob */
+	.woocommerce ul.products li.product, 
+	.woocommerce-page ul.products li.product {
+		width: 100%;
+		float: none;
+		text-align: center;
+		padding: 5px;
+		margin: 3px;
+	}
+    
+	 /* Woocommerce :: make full width Featured product list */
+	.columns-3 ul.products li.product, 
+	.woocommerce.columns-3 ul.products li.product {
+		width: 100% !important;
+	}
+	
+	.container.centreit .woocommerce.columns-3 ul.products li.product {
+		width: 100% !important;
+	}
+ 
+	.columns-3 ul.products {
+		width: 100% !important;
+	}
+	
+	
+ 
+	/* 
+	We want Initial state of NAV <div> menu is hidden on mobiles, ONLY the icon to Click is shown 
+	We toggle this element display to block with javascript when user click ICON 
+	*/	
+	ul#myTopnav {
+		display: none;
+		padding: 0;
+	}
+	#myTopnav .dropdown { /* make Menu items block */
+		display: block!important;			
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+	.child-ul .dropdown {
+		border: none;
+	}
+			
+	/* SPECIFICALLY hide <div col-3> inside NAVIGATION container */
+	#navigation .col-3 {
+		display: none!important;
+	}
+    
+    
+    h1, h2, h3, h4 {        
+        margin: 10px;
+        text-align: center;
+    }       
+     
+    hr {
+        display: none;
+    }
+    
+}
+
+/* everything less than or equal to 768px :: Small Devices, Tablets */
+@media only screen and (max-width : 768px) {    
+   
+   
+	
+}
+
+/* everything less than or equal to 480px :: Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    
+}
+
+/* everything less than or equal to 320px :: Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
+}
+

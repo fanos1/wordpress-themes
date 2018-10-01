@@ -1,0 +1,766 @@
+/*
+	Theme Name: Big Boys
+	Description: Theme, created from HTML5 Boilerplate (http://html5blank.com)
+	Version: 1.0
+	Author: Irfan kissa
+*/
+
+/* =============================
+ STYLES FROM BOOTSTRAP 
+ ======================== */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.lead {
+
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1.4;	
+
+}
+.breadcrumb {
+    padding: 6px;
+    margin-bottom: 10px;
+    list-style: none;
+    font-size: .75em;
+    
+    background-color: #eceeef; 
+    border-radius: 5px;
+   
+    overflow: hidden;
+}
+
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.table-bordered {
+    border: 1px solid #ddd;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid #ddd;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+th {
+    text-align: left;
+}
+
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+.alert {
+    padding: 1em 1.25em;
+    margin-bottom: 1em;
+    border: 1px solid transparent;
+    border-radius: .25em;
+}
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+}
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+}
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bcdff1;
+    color: #31708f;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.caption {
+    padding: 9px;
+    color: #333;
+}
+/* 
+===================== 
+END BOOTSTRAP STYLES 
+=======================
+*/
+
+
+
+
+/* ========= 
+ GLOBAL 
+ =========== */
+ 
+/* 
+ html {
+	font-size:62.5%;
+}
+
+body {
+	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#444;
+} 
+*/
+
+body {
+	font-family: 'Cabin', sans-serif;
+}
+
+:root {
+    --main-txt-color: #04726b;
+}
+
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+
+/* 
+img {
+	max-width:100%;
+	vertical-align:bottom;
+} 
+*/
+
+a {
+	color:#444;
+	text-decoration:none;
+} 
+a:hover {
+	color:red;
+}
+a:focus {
+	outline:0;
+}
+a:hover,
+a:active {
+	outline:0;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* 
+Mobile first is better!
+Start all columns width 100%, we change the design when the width gets larger than 768px. 
+This will make our design Mobile First: 
+*/
+
+[class*="col-"] {  
+    width: 100%;
+}
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+.container {  
+	width: 100%;
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto; 
+	/* padding: 5px;   */
+	overflow: hidden;    
+	background-color: #fff;
+}
+	
+/* Apply clearfix to all .containers */
+.container::after { 
+    content: "";
+    clear: both;
+    display: table;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.img-responsive {
+   /* width: 100%;  If you want the image to scale both up and down on responsiveness, set the CSS width property to 100% and height to auto:*/  
+  max-width: 100% ; /* image to scale down if it has to, but never scale up to be larger than its original size,         */
+  height: auto;  
+  border:none;
+}
+
+/* ============================= 
+ ICONS :: https://icomoon.io/app 
+================================ */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}		
+.icon-cart { /* Single-colored icons can be modified like so: .icon-name */
+  font-size: 18px;
+  color: #E27900;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #000;
+    border-color: #999;
+    box-shadow: 5px 5px 5px #888888;
+    margin-bottom: 16px;
+}
+.centreit {
+	text-align: center;
+}
+
+.logo {
+    display: none; /* Default is not desplayed, We display this on DeskTops */
+}
+
+
+
+/* ---------------  
+ NAV styles 
+ ---------------- */
+.dropbtn {
+	cursor: pointer;				
+	color: #000;
+	text-decoration: none;		
+}
+ul#myTopnav {
+	padding: 10px 10px 10px 0;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin-top: 20px;
+}
+ul#myTopnav > li.dropdown {
+	position: relative;
+	display: inline-block;
+	margin-right: 2em;	
+}
+
+ul#myTopnav li a:hover {
+	color: red;
+} 
+
+
+.dropdown a {
+	color: #49504c;
+	text-decoration: none;			
+}
+
+.child-ul {	
+	/* ----------
+	From BOOTSTRAP 
+	-------------- */
+	position: absolute;
+	display: none;		
+	
+	left: 0;
+	z-index: 1000;	                        
+	
+	list-style: none;
+	margin: 2px 0 0;            
+	min-width: 160px;
+	padding: 10px;			            
+	
+	text-align: left;
+	background-color: #fff;
+   
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+		
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);         
+	
+}
+.child-ul li {
+	padding: 5px 0px 5px 0px;
+}
+		
+nav input[type=text] {
+	padding: 6px;            
+	border: 1px solid #ebebeb;            
+	font-size: 17px;
+}
+
+input[type="search"] {			
+	background: transparent;
+	border-color: transparent;
+}
+
+input, select, textarea {
+	padding: 8px 10px;
+	line-height: 1.42;
+}
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+/* -------------------
+WOOCOMMERCE OVERWRITE
+----------------------- */
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, 
+.woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+    background-color: #000;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+form#commentform {
+    max-width: 400px;
+}
+form#commentform textarea#comment {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+form#commentform input[type="text"], 
+form#commentform input[type="email"], 
+form#commentform select {
+    width: 100%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button {
+    color: #fff;
+    background-color: #000; /* Make Buttons Black color  */   
+}
+.woocommerce ul.products li.product .price {
+    color: red;    
+    font-size: 1em;
+}
+
+/* Text Align to Centre Product TITLES and Descript */
+.woocommerce ul.products li.product, 
+.woocommerce-page ul.products li.product {
+    
+    text-align: center;
+}
+
+#primary {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Hide product counting  save space */	
+.woocommerce-result-count {
+	display:none;	
+}
+	
+.woocommerce #respond input#submit.disabled, 
+.woocommerce #respond input#submit:disabled, 
+.woocommerce #respond input#submit[disabled]:disabled, 
+.woocommerce a.button.disabled, 
+.woocommerce a.button:disabled, 
+.woocommerce a.button[disabled]:disabled, 
+.woocommerce button.button.disabled, 
+.woocommerce button.button:disabled, 
+.woocommerce button.button[disabled]:disabled, 
+.woocommerce input.button.disabled, 
+.woocommerce input.button:disabled, 
+.woocommerce input.button[disabled]:disabled {
+    color: bisque;
+}
+
+.woocommerce div.product p.price, 
+.woocommerce div.product span.price {
+    color: red;
+}
+
+/* ------------------------------------
+    RESPONSIVE
+ ------------------------------------ 
+
+@media only screen and (min-width:320px) {
+
+}
+@media only screen and (min-width:480px) {
+
+}
+@media only screen and (min-width:768px) {
+
+}
+@media only screen and (min-width:1024px) {
+
+}
+@media only screen and (min-width:1140px) {
+
+}
+@media only screen and (min-width:1280px) {
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+} 
+*/
+		
+/* For mobiles screens < 992 */
+@media only screen and (max-width : 992px) {
+	ul#myTopnav {
+		border: none;
+		margin-left: 16px;
+	}
+	/* 
+	We want Initial(Default) state of NAV <div> menu is hidden on mobiles, ONLY the 3-dot icon to Click is shown 
+	We toggle this element display to block with javascript when user clicks ICON 
+	*/				
+	ul#myTopnav {
+		display: none;
+		padding: 0;
+	}
+	#myTopnav .dropdown {
+		display: block!important;			
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+	
+	/*--------- 
+	 Woocmmerce overwrite on Mobile 
+	 -------------------- */
+	#primary {
+	  text-align: center;
+	}	
+	form.woocommerce-ordering {
+	  display: none;
+	}
+
+	
+}		
+ 
+ 
+
+/* 
+for devices bigger than 600px. Note that below we use another Query for DESKTOPs. 
+We want to apply 'col-s-1' CSS classes only if screen is > 600px < 768px
+[col-s-] will be applied only if screen is between 600-768
+*/
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+	
+	
+	/* float all columns */
+	[class*="col-"] {
+		float: left;     
+		padding: 10px;   
+	}
+   
+    /* Hide this <div> container on Desktops. it contains the 3-dot Mobile Nav Icon. 3-dot icon should be visibile to click only on mb */
+    #mb-menu-icon {
+		display: none!important;
+	}
+	
+    #header .col-4:nth-child(n+3) {  
+		display: block!important; /* Default was not to display on mobile this SHOPPING CART, We display on Desktop with Media */
+	}
+	#header .col-4:first-child { 
+		/* This element (SEARCH bar) Was hidden on mobile, Re-display it on desktop */
+		display: block!important;
+	} 
+
+    /* Lower the margin on Desk */
+    #featured .row:first-child {
+        margin-top: 6px;
+    }
+	
+}
+
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------ */
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}

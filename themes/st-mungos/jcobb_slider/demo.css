@@ -1,0 +1,50 @@
+/* Demo CSS - You do not need this css in your own slider */
+
+/*
+* the colour of the caption was inherited from the <body> tag in original version, however in my wordpress
+* i have  different font colour for the content. So, i need to create #banner-slide ID, and give it color:red
+* for all its children 
+*/
+#banner-slide {
+	font-family: "Open Sans", helvetica, arial;
+	color: #FFF; /*gray*/
+	font-weight: 700;
+}
+
+/*
+#banner-fade,
+#banner-slide{
+	margin-bottom: 60px;
+}
+*/
+
+ul.bjqs-controls.v-centered li a { /*for 'next' nad 'prev' buttons on slide */
+	display: block;
+	padding: 10px;
+	background: #fff;
+	color: #F00; /*red*/
+	text-decoration: none;
+}
+
+ul.bjqs-controls.v-centered li a:hover{
+	background:#000;
+	color:#fff;
+}
+
+ol.bjqs-markers li a { /*for 1,2,3 where user can click to go next img */
+	padding: 5px 10px;
+	background: #000;
+	color:#F3C; /*pink*/
+	margin: 5px;
+	text-decoration: none;	
+}
+
+ol.bjqs-markers li.active-marker a,
+ol.bjqs-markers li a:hover{
+	background: #999;
+}
+
+p.bjqs-caption{	
+	background:#ee6a1b;	/*fallback for browser which doesn't supprot transparency*/
+	background: rgba(235,106,24,0.5);
+}

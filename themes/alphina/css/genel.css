@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* 
+font-family (stack): MaryAnn,"Times New Roman",Times,serif
+Font being rendered: MaryAnn
+font-size: 30px
+*/
+
+body {
+    
+}
+
+img#logo {
+    /* If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size: */	
+    max-width:90%; /* make img responsive % */    
+    height:auto;
+    padding-left: 1em;
+}
+
+.three-box {
+    box-sizing: border-box;
+    width: 33%;
+    
+    float: left;
+}
+#commonlinksbar div#social-icons {
+    text-align: right;
+    position: relative;
+    top: 50px;
+}
+
+
+#commonlinksbar div.three-box.hide-it {    
+    position: relative;
+    top: 50px;    
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+#slider-row h1,
+#slider-row h2 {
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #598526;        
+    padding: 0;
+    line-height: 80%;
+}
+#slider-row img {    
+    max-width:  100%; /* make img responsive */    
+    height: auto;
+}
+
+#front-page-texthumb .thumbnail {
+    border: none;    
+}
+#front-page-texthumb h1, 
+#front-page-texthumb h2,
+#front-page-texthumb h3,
+#front-page-texthumb h4 {
+    font-weight: 700;
+    font-size: 22px;
+    color: #677E52;    
+}
+
+.container-fluid div.thumbnail h3 {
+    color: #677E52;    
+}
+
+
+.btn-success {
+    color: #fff;
+    background-color: #677E52;
+    border-color: #4cae4c;
+}
+
+.clearfix:after {
+    content: " "; /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+
+/*==========  BOOTSTRAP MEDIA QUERIES BREAKPOINTS ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/*custom media */
+@media only screen and (max-width : 1040px) {
+    #slider-row h1, #slider-row h2 {        
+        font-size: 60px !important;        
+    }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #slider-row h1, #slider-row h2 {        
+        font-size: 46px !important;        
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .hide-it {
+        visibility: hidden;
+    }
+    #slider-row {
+        display: none;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
+}
